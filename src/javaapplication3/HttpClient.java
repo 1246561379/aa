@@ -64,9 +64,6 @@ public class HttpClient {
     private HashMap<Character,Integer> words; 
     private String defaultEncoding;
     
-
-    
-    
     public HttpClient(String url,String encoding){
         
         hrefs = new LinkedList<>();
@@ -203,6 +200,7 @@ public class HttpClient {
                     result  = doGet2(extactedEncoding);    
                 }
                 result = Html2Text(result,extactedEncoding);
+                System.err.println(result);
                 Sumsup(result);    
             }
             
